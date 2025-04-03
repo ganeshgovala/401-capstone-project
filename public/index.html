@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .sketch-bg {
+            background-color: #e5e5f7;
+            opacity: 0.8;
+            background-size: 10px 10px;
+            background-image: repeating-linear-gradient(45deg, #8b8b8b 0, #8b8b8b 1px, #ffffff 0, #ffffff 50%);
+        }
+    </style>
+  </head>
+
+  <body class="flex">
+    <!--LEFT-->
+    <div class="w-[24.25vw] border-r-2 border-black h-screen flex flex-col sticky top-0">
+      <div
+        class="h-[24vh] w-full mt-[218px] border-t-2 border-b-2 border-black relative"
+      >
+        <img
+          src="quote.svg"
+          class="absolute h-24 left-5 -top-12 bg-white p-5"
+          alt=""
+        />
+        <p class="text-xl pt-14 px-5">
+          Blogging is not about writing, it is about thinking, then writing.
+        </p>
+        <p class="px-5 py-4 text-xl font-semibold">- Om Malik</p>
+      </div>
+    </div>
+    <div class="w-[0.75vw] border-r-2 border-black h-screen sticky top-0 sketch-bg"></div>
+
+    <!--CENTER-->
+    <div class="w-[50vw] h-[465vh] border-r-2 border-black flex flex-col">
+      <div class="h-fit border-b-2 border-black">
+        <div class="bg-[#101010] w-full h-10 mb-4"></div>
+        <p class="text-3xl pl-2 text-[#3c3c3c] mx-5">Welcome to,</p>
+        <h1 class="text-9xl text-[#101010] font-sans font-semibold mx-5">
+          FLIPPER
+        </h1>
+        <p class="text-lg py-2 mb-3 text-[#3c3c3c] px-2 mx-5">
+          Flipper is a modern and user-friendly blog website designed for
+          writers and readers to share, explore, and engage with insightful
+          content.
+        </p>
+      </div>
+      <div class="h-[10vh] border-b-2 border-black flex">
+        <div
+          class="w-1/2 h-full border-r-2 border-black px-5 flex items-center justify-between"
+        >
+          <p class="text-3xl pl-2 font-semibold">Login</p>
+          <div
+            class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45"
+          >
+            <img src="arrow.svg" alt="" />
+          </div>
+        </div>
+        <div class="w-1/2 h-full px-5 flex items-center justify-between">
+          <p class="text-3xl pl-2 font-semibold">Signup</p>
+          <div
+            class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45"
+          >
+            <img src="arrow.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--Blog 1-->
+      <div class="h-[40vh]">
+        <p class="px-7 py-5 border-b-2 border-black text-3xl font-semibold">
+          Popular Blogs
+        </p>
+        <div class="h-fit border-b-2 border-black" id="blogs-container">
+          <div class="flex items-center w-full my-5">
+            <div class="h-12 w-12 rounded-full bg-black ml-5 mr-4">
+                <img src="https://html.com/wp-content/uploads/flamingo.webp" 
+                     class="h-12 w-12 rounded-full object-cover"
+                     alt="">
+            </div>
+            <div>
+              <p class="text-xl font-semibold">Name of the person</p>
+              <p class="text-md text-[#7a7a7a]">Content creator</p>
+            </div>
+          </div>
+          <hr class="text-[#bfbfbf] mx-5" />
+          <h1 class="text-4xl font-semibold px-5 py-3">
+            The Art of Slow Living: Embracing a Mindful Life
+          </h1>
+          <p class="px-5 pt-2 pb-6 font-md font-mono">
+            In today’s fast-paced world, where productivity and hustle culture
+            dominate, many people find themselves constantly rushing from one
+            task to another without truly experiencing life. The slow living
+            movement encourages us to pause, reflect, and embrace a more
+            intentional way of living—one that prioritizes quality over
+            quantity, presence over pressure, and mindfulness over mindless
+            routine. This blog explores the essence of slow living, from
+            appreciating the simple joys of everyday life to cultivating deeper
+            connections with ourselves and those around us. Learn how small
+            changes—like savoring your morning coffee without distractions,
+            taking mindful walks in nature, or reducing screen time—can create a
+            profound impact on your well-being. Through practical tips and
+            personal insights, we’ll uncover how slowing down doesn’t mean doing
+            less, but rather doing things with more awareness, purpose, and joy.
+            Whether you’re looking to reduce stress, enhance creativity, or
+            simply find more peace in your daily routine, embracing the slow
+            living philosophy can transform the way you experience life. 🌿✨
+          </p>
+          <hr class="text-[#bfbfbf] mx-5" />
+          <div class="px-5 py-3 flex space-x-3 items-center">
+            <img
+              src="like-before.svg"
+              id="like-symbol"
+              class="h-6 cursor-pointer"
+            />
+            <p class="text-lg font-semibold">201</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--RIGHT-->
+    <div class="w-[25vw] border-r-2 border-black h-screen flex flex-col sticky top-0">
+      <div class="h-[24vh] w-full mt-[218px] border-t-2 border-b-2 border-black">
+        <div class="h-4 w-full sketch-bg"></div>
+        <img src="image.png" class="h-[56vh] w-full object-cover" alt="" />
+      </div>
+    </div>
+
+    <script>
+      flag = 1;
+      document.getElementById('like-symbol').addEventListener("click", () => {
+          flag = !flag;
+          const like = document.getElementById('like-symbol');
+          like.src = "like-after.svg";
+
+          if(flag == 0)
+              like.src = "like-after.svg";
+          else
+              like.src = "like-before.svg";
+      })
+
+      const blogs = [
+        [
+            "Sophia Carter",
+            "Lifestyle Blogger",
+            "The Power of Morning Routines: How to Start Your Day Right",
+            "A well-crafted morning routine can set the tone for a productive and peaceful day. Many successful individuals swear by their morning rituals, as they help shape their mindset, improve focus, and reduce stress throughout the day...",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg"
+        ],
+        [
+            "Daniel Thompson",
+            "Software Developer",
+            "Why JavaScript is the Backbone of Modern Web Development",
+            "JavaScript has played a fundamental role in shaping the internet as we know it today. It’s the driving force behind interactive websites, dynamic web applications, and even backend services...",
+            "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+        ],
+        [
+            "Elena Morales",
+            "Fitness Coach",
+            "The Science Behind Building Muscle: What You Need to Know",
+            "Building muscle is more than just lifting heavy weights—it's about consistency, proper nutrition, and giving your body the time it needs to recover...",
+            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+        ],
+        [
+            "Mark Reynolds",
+            "Tech Enthusiast",
+            "The Future of Artificial Intelligence: What Lies Ahead?",
+            "Artificial intelligence is evolving at an extraordinary pace, reshaping industries such as healthcare, finance, and entertainment...",
+            "https://images.unsplash.com/photo-1581092337856-dfbcdf6f5b39"
+        ],
+        [
+            "Olivia Bennett",
+            "Food Blogger",
+            "10 Simple and Healthy Recipes You Can Make in 15 Minutes",
+            "Cooking healthy meals doesn't have to be complicated or time-consuming. Many people avoid home-cooked meals because they believe they require too much effort...",
+            "https://images.unsplash.com/photo-1556911261-4fd4b27f42c3"
+        ]
+    ];
+
+
+
+      blogs.forEach((element) => {
+        const blog = document.createElement('div');
+        blog.innerHTML = `
+            <div class="flex items-center w-full my-5">
+                <div class="h-12 w-12 rounded-full bg-black ml-5 mr-4">
+                    <img src=${element[4]} class="h-13 w-13 rounded-full object-cover" />    
+                </div>
+                <div>
+                <p class="text-xl font-semibold">${element[0]}</p>
+                <p class="text-md text-[#7a7a7a]">${element[1]}</p>
+                </div>
+            </div>
+            <hr class="text-[#bfbfbf] mx-5" />
+            <h1 class="text-4xl font-semibold px-5 py-3">
+                ${element[2]}
+            </h1>
+            <p class="px-5 pt-2 pb-6 font-md font-mono">
+                ${element[3]}
+            </p>
+            <hr class="text-[#bfbfbf] mx-5" />
+            <div class="px-5 py-3 flex space-x-3 items-center">
+                <img
+                src="like-before.svg"
+                id="like-symbol"
+                class="h-6 cursor-pointer"
+                />
+                <p class="text-lg font-semibold">204</p>
+            </div>
+            </div>
+        `;
+
+        document.getElementById('blogs-container').appendChild(blog);
+      })
+      const p = document.createElement('div');
+      p.innerHTML = `<p class="text-md px-5 border-t-2 border-black py-3">&copy; Ganesh Govala</p>`
+      document.getElementById('blogs-container').appendChild(p);
+    </script>
+  </body>
+</html>
