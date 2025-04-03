@@ -23,7 +23,7 @@
         class="h-[24vh] w-full mt-[218px] border-t-2 border-b-2 border-black relative"
       >
         <img
-          src="quote.svg"
+          src="assets/quote.svg"
           class="absolute h-24 left-5 -top-12 bg-white p-5"
           alt=""
         />
@@ -50,22 +50,16 @@
         </p>
       </div>
       <div class="h-[10vh] border-b-2 border-black flex">
-        <div
-          class="w-1/2 h-full border-r-2 border-black px-5 flex items-center justify-between"
-        >
+        <div class="w-1/2 h-full border-r-2 border-black px-5 flex items-center justify-between">
           <p class="text-3xl pl-2 font-semibold">Login</p>
-          <div
-            class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45"
-          >
-            <img src="arrow.svg" alt="" />
+          <div class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45 cursor-pointer">
+            <img src="assets/arrow.svg" alt="" />
           </div>
         </div>
         <div class="w-1/2 h-full px-5 flex items-center justify-between">
           <p class="text-3xl pl-2 font-semibold">Signup</p>
-          <div
-            class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45"
-          >
-            <img src="arrow.svg" alt="" />
+          <div class="w-10 h-10 rounded-full bg-[#101010] text-white p-3 -rotate-45 cursor-pointer">
+            <img src="assets/arrow.svg" alt="" />
           </div>
         </div>
       </div>
@@ -112,7 +106,7 @@
           <hr class="text-[#bfbfbf] mx-5" />
           <div class="px-5 py-3 flex space-x-3 items-center">
             <img
-              src="like-before.svg"
+              src="assets/like-before.svg"
               id="like-symbol"
               class="h-6 cursor-pointer"
             />
@@ -127,7 +121,7 @@
     <div class="w-[25vw] border-r-2 border-black h-screen flex flex-col sticky top-0">
       <div class="h-[24vh] w-full mt-[218px] border-t-2 border-b-2 border-black">
         <div class="h-4 w-full sketch-bg"></div>
-        <img src="image.png" class="h-[56vh] w-full object-cover" alt="" />
+        <img src="assets/image.png" class="h-[56vh] w-full object-cover" alt="" />
       </div>
     </div>
 
@@ -136,12 +130,12 @@
       document.getElementById('like-symbol').addEventListener("click", () => {
           flag = !flag;
           const like = document.getElementById('like-symbol');
-          like.src = "like-after.svg";
+          like.src = "assets/like-after.svg";
 
           if(flag == 0)
-              like.src = "like-after.svg";
+              like.src = "assets/like-after.svg";
           else
-              like.src = "like-before.svg";
+              like.src = "assets/like-before.svg";
       })
 
       const blogs = [
@@ -189,7 +183,7 @@
         blog.innerHTML = `
             <div class="flex items-center w-full my-5">
                 <div class="h-12 w-12 rounded-full bg-black ml-5 mr-4">
-                    <img src=${element[4]} class="h-13 w-13 rounded-full object-cover" />    
+                    <img src=${element[4]} class="h-12 w-12 rounded-full object-cover" />    
                 </div>
                 <div>
                 <p class="text-xl font-semibold">${element[0]}</p>

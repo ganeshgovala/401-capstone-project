@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .sketch-bg {
+            background-color: #e5e5f7;
+            opacity: 0.8;
+            background-size: 10px 10px;
+            background-image: repeating-linear-gradient(45deg, #8b8b8b 0, #8b8b8b 1px, #ffffff 0, #ffffff 50%);
+        }
+    </style>
+</head>
+<body class="flex justify-center">
+    <div class="w-[35vw] border-r-2 border-l-2 h-screen border-black flex items-center">
+        <div class="w-full">
+            <div class="h-5 border-b-2 border-t-2 border-black sketch-bg"></div>
+            <p class="text-8xl p-5 pb-9 border-b-2 border-black">Login</p>
+            <p class="p-5 border-b-2 border-black text-xl text-[#595959]">Welcome back! Enter your credentials to continue</p>
+            <div class="h-4 border-b-2 border-black sketch-bg"></div>
+            <input type="text" class="w-full p-5 text-2xl outline-none border-b-2 border-black" placeholder="Email">
+            <input type="text" class="w-full p-5 text-2xl outline-none border-b-2 border-black" placeholder="Password">
+            <div class="h-4 border-b-2 border-black sketch-bg"></div>
+            <button class="w-full p-5 text-2xl outline-none border-b-2 text-white bg-[#121212] font-semibold border-black">Login</button>
+            <p class="p-5 border-b-2 border-black text-xl text-[#595959]">Don't have an Account ? <a class="text-black font-semibold hover:underline cursor-pointer">Create one</a></p>
+            <div class="h-5 border-b-2 border-black sketch-bg"></div>
+        </div>
+    </div>
+</body>
+</html>
